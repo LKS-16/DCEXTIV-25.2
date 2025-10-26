@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:padding="32dp"
+        tools:context=".DorActivity">
+
+        <TextView
+            android:id="@+id/tvTituloDor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Onde está a sua dor ou desconforto?"
+            android:textAlignment="center"
+            android:textColor="@color/text_primary"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescricaoDor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Toque na região do corpo onde sente desconforto."
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloDor" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridDor"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            app:columnCount="3"
+            app:layout_constraintBottom_toTopOf="@id/btnVoltarDor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescricaoDor"
+            app:rowCount="3"
+            app:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/btnCabeca"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/cabeca"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Cabeça"
+                android:text="Cabeça"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnPescoco"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/pescoco"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Pescoço"
+                android:text="Pescoço"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnOmbros"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/ombros"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Ombros"
+                android:text="Ombros"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnPeito"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/peito"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Peito"
+                android:text="Peito"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnAbdomen"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/abdomen"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Abdômen"
+                android:text="Abdômen"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnCostas"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/costas"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Costas"
+                android:text="Costas"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnPernas"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/pernas"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Pernas"
+                android:text="Pernas"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnPes"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/pes"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Pés"
+                android:text="Pés"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+            <Button
+                android:id="@+id/btnCorpoInteiro"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/option_button_bg"
+                android:drawableTop="@drawable/corpointeiro"
+                android:drawablePadding="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="10dp"
+                android:tag="Corpo Inteiro"
+                android:text="Corpo Inteiro"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <Button
+            android:id="@+id/btnVoltarDor"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_button_bg"
+            android:drawableStart="@drawable/voltar"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="20dp"
+            android:text="Voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
